@@ -25,13 +25,16 @@ body {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
+
 .tracking-wider {
   letter-spacing: 0.15em;
   font-size: 0.85rem;
 }
+
 .bg-light-variant {
   background-color: var(--bg-secondary);
 }
+
 .max-w-700 {
   max-width: 700px;
 }
@@ -66,29 +69,13 @@ body {
 .glass-nav .navbar-toggler {
   border-color: rgba(0, 0, 0, 0.1);
 }
+
 .glass-nav .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.75%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .hero-section {
   background: radial-gradient(circle at 50% 50%, rgba(255, 193, 7, 0.08) 0%, transparent 60%);
-}
-
-.underline-accent {
-  position: relative;
-  display: inline-block;
-}
-
-.underline-accent::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 8px;
-  bottom: 8px;
-  left: 0;
-  background-color: var(--accent-yellow);
-  z-index: -1;
-  opacity: 0.4;
 }
 
 .btn-yellow-hover:hover {
@@ -99,7 +86,6 @@ body {
 
 .about-img-placeholder {
   width: 100%;
-  height: 320px;
   background-color: #f1f3f5;
   border-radius: 16px;
   border: 1px solid var(--glass-border);
@@ -195,4 +181,83 @@ body {
 .footer p {
   color: #495057 !important;
   font-weight: 500;
+}
+
+.typing-wrapper {
+  display: inline-block;
+  position: relative;
+  color: #ffc107;
+  white-space: nowrap;
+  border-right: 3px solid #ffc107;
+  animation: typing-blink 0.75s step-end infinite;
+}
+
+.typing-text::before {
+  content: "Natalie R. Paduhilao";
+  animation: switch-text 12s infinite;
+}
+
+@keyframes typing-blink {
+  from, to { border-color: transparent }
+  50% { border-color: #ffc107; }
+}
+
+@keyframes switch-text {
+  0%, 5% { content: ""; }
+  6% { content: "N"; }
+  7% { content: "Na"; }
+  8% { content: "Nat"; }
+  9% { content: "Nata"; }
+  10% { content: "Natal"; }
+  11% { content: "Natali"; }
+  12% { content: "Natalie"; }
+  13% { content: "Natalie "; }
+  14% { content: "Natalie R"; }
+  15% { content: "Natalie R."; }
+  16% { content: "Natalie R. "; }
+  17% { content: "Natalie R. P"; }
+  18% { content: "Natalie R. Pa"; }
+  19% { content: "Natalie R. Pad"; }
+  20% { content: "Natalie R. Padu"; }
+  21% { content: "Natalie R. Paduh"; }
+  22% { content: "Natalie R. Paduhi"; }
+  23% { content: "Natalie R. Paduhil"; }
+  24% { content: "Natalie R. Paduhila"; }
+  25%, 45% { content: "Natalie R. Paduhilao"; }
+  46% { content: "Natalie R. Paduhila"; }
+  47% { content: "Natalie R. Paduhil"; }
+  48% { content: "Natalie R. Paduhi"; }
+  49% { content: "Natalie R. Paduh"; }
+  50% { content: "Natalie R. Padu"; }
+  51% { content: "Natalie R. Pad"; }
+  52% { content: "Natalie R. Pa"; }
+  53% { content: "Natalie R. P"; }
+  54% { content: "Natalie R. "; }
+  55% { content: "Natalie R"; }
+  56% { content: "Natalie "; }
+  57% { content: "Natalie"; }
+  58% { content: "Natali"; }
+  59% { content: "Natal"; }
+  60% { content: "Nata"; }
+  61% { content: "Nat"; }
+  62% { content: "Na"; }
+  63% { content: "N"; }
+  64%, 68% { content: ""; }
+  69% { content: "I"; }
+  70% { content: "IT"; }
+  71% { content: "IT "; }
+  72% { content: "IT S"; }
+  73% { content: "IT St"; }
+  74% { content: "IT Stu"; }
+  75% { content: "IT Stud"; }
+  76% { content: "IT Stude"; }
+  77% { content: "IT Studen"; }
+  78%, 93% { content: "IT Student"; }
+  94% { content: "IT Studen"; }
+  95% { content: "IT Stude"; }
+  96% { content: "IT Stud"; }
+  97% { content: "IT Stu"; }
+  98% { content: "IT St"; }
+  99% { content: "IT"; }
+  100% { content: ""; }
 }

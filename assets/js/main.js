@@ -1,21 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-  
-  // 1. SCROLL HIGH-CONTRAST HEADER EFFECT
   const navbar = document.querySelector(".glass-nav");
   
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      navbar.style.background = "rgba(255, 255, 255, 0.98)";
-      navbar.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.04)";
-    } else {
-      navbar.style.background = "rgba(255, 255, 255, 0.85)";
-      navbar.style.boxShadow = "none";
-    }
-  });
+  if (navbar) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.style.background = "rgba(255, 255, 255, 0.98)";
+        navbar.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.04)";
+      } else {
+        navbar.style.background = "rgba(255, 255, 255, 0.85)";
+        navbar.style.boxShadow = "none";
+      }
+    });
+  }
 
-  /* ------------------------------------------------------------- */
-
-  // 2. SCROLLSPY LOGIC
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".glass-nav .nav-link");
 
@@ -41,9 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* ------------------------------------------------------------- */
-
-  // 3. SCROLL REVEAL (FADE-IN UP) ANIMATION
   const elementsToAnimate = document.querySelectorAll(
     ".about-section, .project-card, .contact-section"
   );
@@ -73,5 +67,4 @@ document.addEventListener("DOMContentLoaded", () => {
   elementsToAnimate.forEach((element) => {
     revealOnScrollObserver.observe(element);
   });
-  
 });
