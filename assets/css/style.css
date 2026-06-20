@@ -1,0 +1,198 @@
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-card: #ffffff;
+  --accent-yellow: #ffc107;
+  --accent-yellow-dark: #e0a800;
+  --text-dark: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #757575;
+  --glass-border: rgba(0, 0, 0, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+.py-6 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.tracking-wider {
+  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+}
+.bg-light-variant {
+  background-color: var(--bg-secondary);
+}
+.max-w-700 {
+  max-width: 700px;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.logo-text {
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+}
+
+.glass-nav .nav-link {
+  color: var(--text-secondary) !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.glass-nav .nav-link:hover, 
+.glass-nav .nav-link.active {
+  color: var(--accent-yellow-dark) !important;
+  font-weight: 700 !important;
+}
+
+.glass-nav .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.glass-nav .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.75%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.hero-section {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 193, 7, 0.08) 0%, transparent 60%);
+}
+
+.underline-accent {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-accent::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  bottom: 8px;
+  left: 0;
+  background-color: var(--accent-yellow);
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.btn-yellow-hover:hover {
+  background-color: var(--accent-yellow) !important;
+  border-color: var(--accent-yellow) !important;
+  color: var(--text-dark) !important;
+}
+
+.about-img-placeholder {
+  width: 100%;
+  height: 320px;
+  background-color: #f1f3f5;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  z-index: 2;
+  position: relative;
+}
+
+.border-accent-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--text-dark);
+  border-radius: 16px;
+  top: 15px;
+  left: -15px;
+  z-index: 1;
+  opacity: 0.1;
+}
+
+.line-decorator {
+  width: 24px;
+  height: 2px;
+  background-color: var(--accent-yellow-dark);
+}
+
+.project-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  border-color: var(--accent-yellow);
+}
+
+.project-img-wrapper {
+  position: relative;
+}
+
+.project-placeholder {
+  height: 200px;
+  background: #f1f3f5;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.project-number {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  background-color: var(--accent-yellow);
+  padding: 2px 10px;
+  border-radius: 6px;
+}
+
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-dark) !important;
+  font-size: 2rem; 
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.social-icon-link:hover {
+  color: var(--accent-yellow-dark) !important;
+  transform: translateY(-3px);
+}
+
+.footer {
+  background-color: #f8f9fa !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.footer .footer-logo {
+  color: #212529 !important;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.footer p {
+  color: #495057 !important;
+  font-weight: 500;
+}
