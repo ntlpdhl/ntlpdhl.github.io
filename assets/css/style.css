@@ -39,8 +39,8 @@ body {
   max-width: 700px;
 }
 
-.glass-nav {
-  background: rgba(255, 255, 255, 0.85) !important;
+.navbar.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--glass-border);
@@ -53,24 +53,24 @@ body {
   font-size: 1.4rem;
 }
 
-.glass-nav .nav-link {
-  color: var(--text-secondary) !important;
+.navbar.glass-nav .navbar-nav .nav-link {
+  color: var(--text-secondary);
   font-weight: 500;
   font-size: 0.95rem;
   transition: color 0.2s ease, font-weight 0.2s ease;
 }
 
-.glass-nav .nav-link:hover, 
-.glass-nav .nav-link.active {
-  color: var(--accent-yellow-dark) !important;
-  font-weight: 700 !important;
+.navbar.glass-nav .navbar-nav .nav-link:hover, 
+.navbar.glass-nav .navbar-nav .nav-link.active {
+  color: var(--accent-yellow-dark);
+  font-weight: 700;
 }
 
-.glass-nav .navbar-toggler {
+.navbar.glass-nav .navbar-toggler {
   border-color: rgba(0, 0, 0, 0.1);
 }
 
-.glass-nav .navbar-toggler-icon {
+.navbar.glass-nav .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.75%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
@@ -78,10 +78,10 @@ body {
   background: radial-gradient(circle at 50% 50%, rgba(255, 193, 7, 0.08) 0%, transparent 60%);
 }
 
-.btn-yellow-hover:hover {
-  background-color: var(--accent-yellow) !important;
-  border-color: var(--accent-yellow) !important;
-  color: var(--text-dark) !important;
+.btn.btn-yellow-hover:hover {
+  background-color: var(--accent-yellow);
+  border-color: var(--accent-yellow);
+  color: var(--text-dark);
 }
 
 .about-img-placeholder {
@@ -151,113 +151,34 @@ body {
 .social-icon-link {
   display: inline-flex;
   align-items: center;
-  color: var(--text-dark) !important;
+  color: var(--text-dark);
   font-size: 2rem; 
   text-decoration: none;
   transition: all 0.3s ease;
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  width: auto !important;
-  height: auto !important;
+  background: none;
+  border: none;
+  box-shadow: none;
+  width: auto;
+  height: auto;
 }
 
 .social-icon-link:hover {
-  color: var(--accent-yellow-dark) !important;
+  color: var(--accent-yellow-dark);
   transform: translateY(-3px);
 }
 
-.footer {
-  background-color: #f8f9fa !important;
+footer.footer {
+  background-color: #f8f9fa;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.footer .footer-logo {
-  color: #212529 !important;
+footer.footer .footer-logo {
+  color: #212529;
   font-size: 1.2rem;
   letter-spacing: 1px;
 }
 
-.footer p {
-  color: #495057 !important;
+footer.footer p {
+  color: #495057;
   font-weight: 500;
-}
-
-.typing-wrapper {
-  display: inline-block;
-  position: relative;
-  color: #ffc107;
-  white-space: nowrap;
-  border-right: 3px solid #ffc107;
-  animation: typing-blink 0.75s step-end infinite;
-}
-
-.typing-text::before {
-  content: "Natalie R. Paduhilao";
-  animation: switch-text 12s infinite;
-}
-
-@keyframes typing-blink {
-  from, to { border-color: transparent }
-  50% { border-color: #ffc107; }
-}
-
-@keyframes switch-text {
-  0%, 5% { content: ""; }
-  6% { content: "N"; }
-  7% { content: "Na"; }
-  8% { content: "Nat"; }
-  9% { content: "Nata"; }
-  10% { content: "Natal"; }
-  11% { content: "Natali"; }
-  12% { content: "Natalie"; }
-  13% { content: "Natalie "; }
-  14% { content: "Natalie R"; }
-  15% { content: "Natalie R."; }
-  16% { content: "Natalie R. "; }
-  17% { content: "Natalie R. P"; }
-  18% { content: "Natalie R. Pa"; }
-  19% { content: "Natalie R. Pad"; }
-  20% { content: "Natalie R. Padu"; }
-  21% { content: "Natalie R. Paduh"; }
-  22% { content: "Natalie R. Paduhi"; }
-  23% { content: "Natalie R. Paduhil"; }
-  24% { content: "Natalie R. Paduhila"; }
-  25%, 45% { content: "Natalie R. Paduhilao"; }
-  46% { content: "Natalie R. Paduhila"; }
-  47% { content: "Natalie R. Paduhil"; }
-  48% { content: "Natalie R. Paduhi"; }
-  49% { content: "Natalie R. Paduh"; }
-  50% { content: "Natalie R. Padu"; }
-  51% { content: "Natalie R. Pad"; }
-  52% { content: "Natalie R. Pa"; }
-  53% { content: "Natalie R. P"; }
-  54% { content: "Natalie R. "; }
-  55% { content: "Natalie R"; }
-  56% { content: "Natalie "; }
-  57% { content: "Natalie"; }
-  58% { content: "Natali"; }
-  59% { content: "Natal"; }
-  60% { content: "Nata"; }
-  61% { content: "Nat"; }
-  62% { content: "Na"; }
-  63% { content: "N"; }
-  64%, 68% { content: ""; }
-  69% { content: "I"; }
-  70% { content: "IT"; }
-  71% { content: "IT "; }
-  72% { content: "IT S"; }
-  73% { content: "IT St"; }
-  74% { content: "IT Stu"; }
-  75% { content: "IT Stud"; }
-  76% { content: "IT Stude"; }
-  77% { content: "IT Studen"; }
-  78%, 93% { content: "IT Student"; }
-  94% { content: "IT Studen"; }
-  95% { content: "IT Stude"; }
-  96% { content: "IT Stud"; }
-  97% { content: "IT Stu"; }
-  98% { content: "IT St"; }
-  99% { content: "IT"; }
-  100% { content: ""; }
 }
